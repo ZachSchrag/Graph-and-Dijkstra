@@ -11,7 +11,6 @@
 #include <iostream> // print_shortest_path
 
 class Graph {
-    public:
     struct Vertex {
         size_t ID;
         std::unordered_map<size_t, double> adj_list;
@@ -37,7 +36,8 @@ class Graph {
 
     std::unordered_map<size_t, Vertex*> graph;
     size_t edges; // number of edges counter - want to return edge_count in constant time
-
+    
+    public:
     // constructor
     Graph() : graph{}, edges{0} {}
 
